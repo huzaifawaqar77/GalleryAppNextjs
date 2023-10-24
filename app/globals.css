@@ -2,26 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    @apply py-4 px-6 max-w-6xl mx-auto;
+    background-color: #fb00081a
+}
+h1, h2{
+    @apply text-3xl font-bold text-gray-800;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.card{
+    @apply border-2 border-red-200 shadow-md rounded-md p-4 text-xl my-4;
 }
+.error{
+    @apply text-red-500 p-4 text-xl font-bold text-gray-800 rounded-xl border-2 border-red-500 bg-red-200;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
